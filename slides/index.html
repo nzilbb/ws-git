@@ -28,71 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -206,8 +141,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href=".//images/fav.png">
 </head>
 <body class="quarto-light">
@@ -216,7 +149,7 @@
 
 <section id="title-slide" data-background-image="images/nzilbb-uc.svg" data-background-position="50% 5%" data-background-size="70%" class="quarto-title-block center">
   <h1 class="title">Foundations</h1>
-  <p class="subtitle">Session 3: Exploratory Data Visualisation</p>
+  <p class="subtitle">Session 4: Git, GitHub, and GitLab</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -245,697 +178,52 @@ Joshua Wilson Black <a href="https://orcid.org/0000-0002-8272-5763" class="quart
 <section id="overview-1" class="slide level2">
 <h2>Overview</h2>
 <ol type="1">
-<li class="fragment">New infrastructure: Markdown</li>
-<li class="fragment">Download some data from OSF.io.
-<ul>
-<li class="fragment">Topic: Word usage factors and duration.</li>
-<li class="fragment">We’ll use this for the rest of the ‘Foundations’ sessions.</li>
-</ul></li>
-<li class="fragment">Exploratory visualisation with <code>ggplot2</code>.</li>
+<li class="fragment">Git and version control</li>
+<li class="fragment">GitHub and UC’s GitLab</li>
+<li class="fragment">Recipes and advice</li>
+<li class="fragment">When things go wrong</li>
 </ol>
 <div class="fragment">
-<p>Slides: <a href="https://nzilbb.github.io/ws-data-vis/slides">nzilbb.github.io/ws-data-vis/slides</a></p>
+<p>Slides: <a href="https://nzilbb.github.io/ws-data-vis/slides">nzilbb.github.io/ws-git/slides</a></p>
 </div>
 </section></section>
 <section>
-<section id="markdown" class="title-slide slide level1 center">
-<h1>Markdown</h1>
+<section id="git-and-version-control" class="title-slide slide level1 center">
+<h1>Git and version control</h1>
 
 </section>
-<section id="markdown-1" class="slide level2">
-<h2>Markdown</h2>
-<ul>
-<li class="fragment">Markdown is a ‘markup’ language
-<ul>
-<li class="fragment">Like LaTeX or HTML.</li>
-</ul></li>
-<li class="fragment">Markdown was designed to be easy to read (for a human).</li>
-<li class="fragment">We combine text in markdown with blocks of code.</li>
-<li class="fragment">This is a variety of ‘literate programming’.</li>
-<li class="fragment">Markdown documents can be turned into pdf (via LaTeX), HTML, OpenOffice or Word files.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<pre><code>## Markdown
-
-- Markdown is a 'markup' language
-    - Like LaTeX or HTML.
-- Markdown was designed to be easy to read (for a human).
-- We combine text in markdown with blocks of code.
-- This is a variety of 'literate programming'.
-- Markdown documents can be turned into pdf (via LaTeX), HTML, OpenOffice
-or Word files.</code></pre>
-</section>
-<section id="section" class="slide level2 smaller">
+<section id="section" class="slide level2" data-background-image="http://www.phdcomics.com/comics/archive/phd101212s.gif" data-background-size="contain">
 <h2></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">section</span><span class="ot"> id</span><span class="op">=</span><span class="st">"markdown-1"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"slide level2"</span><span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Markdown<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
-<span id="cb2-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
-<span id="cb2-4"><a href=""></a><span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment"</span><span class="dt">&gt;</span>Markdown is a ‘markup’ language</span>
-<span id="cb2-5"><a href=""></a><span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
-<span id="cb2-6"><a href=""></a><span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment"</span><span class="dt">&gt;</span>Like LaTeX or HTML.<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb2-7"><a href=""></a><span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb2-8"><a href=""></a><span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment"</span><span class="dt">&gt;</span>Markdown was designed to be easy to read (for a human).<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb2-9"><a href=""></a><span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment"</span><span class="dt">&gt;</span>We combine text in markdown with blocks of code.<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb2-10"><a href=""></a><span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment"</span><span class="dt">&gt;</span>This is a variety of ‘literate programming’.<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb2-11"><a href=""></a><span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment"</span><span class="dt">&gt;</span>Markdown documents can be turned into pdf (via LaTeX), HTML, OpenOffice or Word files.<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb2-12"><a href=""></a><span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
-<span id="cb2-13"><a href=""></a><span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
+<section id="version-control" class="slide level2">
+<h2>Version control</h2>
 <ul>
-<li class="fragment">Quarto is a “an open-source scientific and technical publishing system”</li>
-<li class="fragment">Developed by Posit (formerly RStudio)</li>
-<li class="fragment">It is almost entirely compatible with RMarkdown</li>
-<li class="fragment">Quarto is ‘multilingual’ — designed from scratch to work with Python, Julia, etc.</li>
-<li class="fragment">Quarto documents allow us to run code blocks and publish the output.</li>
+<li class="fragment">Software comes in <em>versions</em></li>
+<li class="fragment">Developers need to know how versions relate to each other</li>
+<li class="fragment">Version control systems are the solution</li>
+<li class="fragment">We can borrow their methods</li>
 </ul>
 </section>
-<section class="slide level2">
-
-
-<img data-src="images/markdown_example.png" class="r-stretch quarto-figure-center"><p class="caption">Source view of a Quarto Document open in RStudio.</p></section>
-<section id="tips-and-tricks" class="slide level2">
-<h2>Tips and tricks</h2>
+<section id="why-use-version-control" class="slide level2 smaller">
+<h2>Why use version control?</h2>
 <ul>
-<li class="fragment">RStudio provides a ‘Source’ and a ‘Visual’ mode (toggle at top of source window).</li>
-<li class="fragment">The ‘Visual’ mode is more like a traditional word processor.</li>
-<li class="fragment">I always use the ‘Source’ mode 🤓</li>
-<li class="fragment">Keyboard shortcuts:
+<li class="fragment">“Your paper relies on whatsit scores for every dongle, but I think you must have made an error. How did you calculate them?”
 <ul>
-<li class="fragment">Ctrl/Cmd + Alt + I (<strong>I</strong>nsert new code block)</li>
-<li class="fragment">Ctrl/Cmd + Alt + N (Run <strong>n</strong>ext code block.)</li>
+<li class="fragment">“…uh, they must be on this old hard drive somewhere… wait… perhaps my RA did it?…”</li>
 </ul></li>
-</ul>
-</section>
-<section id="nzilbb-template" class="slide level2">
-<h2>NZILBB template</h2>
+<li class="fragment">“We’ve switched to _sparkly-shiny-new) models this week, but they seem similar to the <em>old-reliable-friendly</em> models we fit a few months ago. How do the results of the two approaches differ?”
 <ul>
-<li class="fragment">Work-in-progress: an NZILBB Quarto template</li>
-</ul>
-<div class="fragment">
-<pre><code># Run in terminal
-quarto use template JoshuaWilsonBlack/nzilbb_doc</code></pre>
-</div>
-</section></section>
-<section>
-<section id="get-some-data" class="title-slide slide level1 center">
-<h1>Get some data</h1>
-
-</section>
-<section id="word-duration-data" class="slide level2">
-<h2>Word duration data</h2>
-<ul>
-<li class="fragment">We will be exploring data from <span class="citation" data-cites="soskuthyChangingWordUsage2017">Sóskuthy and Hay (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></li>
-<li class="fragment">Topic: how word ‘usage factors’ affect word duration.
-<ul>
-<li class="fragment">Usage factors include how <em>frequent</em> a word is, how <em>predictable</em> it is in context etc.</li>
-<li class="fragment">Upshot: Change in usage factors over long time periods affects word duration.</li>
-<li class="fragment">Upshot: There’s some kind of feedback mechanism between production and perception of words.</li>
+<li class="fragment">“…uh, we replaced them…”</li>
 </ul></li>
-<li class="fragment">Data is shared via <a href="https://osf.io/q5wgh/">OSF.io</a></li>
-</ul>
-</section></section>
-<section>
-<section id="plotting-with-ggplot2" class="title-slide slide level1 center">
-<h1>Plotting with <code>ggplot2</code></h1>
-
-</section>
-<section id="the-grammar" class="slide level2">
-<h2>The ‘grammar’</h2>
+<li class="fragment">“Why is your Markdown file longer than <em>War and Peace</em>?
 <ul>
-<li class="fragment">The ‘gg’ in <code>ggplot2</code> stands for ‘grammar of graphics’.</li>
-<li class="fragment">What’s the grammar?</li>
-</ul>
-<div class="fragment">
-<blockquote>
-<p>…a statistical graphic is a <span class="red">mapping</span> from data to aesthetic attributes (colour, shape, size) of <span class="red">geometric objects</span> (points, lines, bars). The plot may also contain <span class="red">statistical transformations</span> of the data and is drawn on a specific <span class="red">coordinate system</span>. <span class="citation" data-cites="wickham2016ggplot2">(<a href="#/references" role="doc-biblioref" onclick="">H. Wickham 2016, 4</a>)</span></p>
-</blockquote>
-</div>
-<ul>
-<li class="fragment">See: <em>The Grammar of Graphics</em> <span class="citation" data-cites="wilkinsonGrammarGraphics1999">(<a href="#/references" role="doc-biblioref" onclick="">Wilkinson 1999</a>)</span></li>
-</ul>
-</section>
-<section id="the-implementation" class="slide level2">
-<h2>The implementation</h2>
-<ol type="1">
-<li class="fragment">Data</li>
-<li class="fragment">Aesthetic mappings <span class="fragment">(from variables to visual properties)</span></li>
-<li class="fragment">Layers <span class="fragment">(points, lines, bars…)</span></li>
-<li class="fragment">Scales and co-ordinates <span class="fragment">(specify <em>how</em> the mappings work)</span></li>
-<li class="fragment">Facets <span class="fragment">(subgroups in data -&gt; subplots)</span></li>
-<li class="fragment">Theme <span class="fragment">(e.g., font size, background colour…)</span></li>
-</ol>
-</section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>big_dia <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">'data'</span>, <span class="st">'big_dia.csv'</span>))</span>
-<span id="cb4-2"><a href=""></a></span>
-<span id="cb4-3"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb4-4"><a href=""></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<div class="cell">
-<div class="cell-output-display">
-<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 22px; margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th">...1</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">TargetOrthography</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">foll_wf</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">prev_wf</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Speaker</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Corpus</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">YOB</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">WordDuration</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">TargetPhonemes</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">dur.context</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">dur.context.avg</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">prev_pred_wf_log</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">foll_pred_wf_log</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">prev_info_wf_avg</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">foll_info_wf_avg</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">syll.length.3</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">seg.no</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">repeated.20</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">wclass</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">initial</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">final</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">unigram.google.gb</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">unigram.diff.google.gb</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">rep.times.avg</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">final.prop.log</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">foll.diff</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">prev.diff</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">final.diff</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">dur.context.diff</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">syll.no</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">able</td>
-<td style="text-align: left;">to</td>
-<td style="text-align: left;">only</td>
-<td style="text-align: left;">speaker426</td>
-<td style="text-align: left;">CC</td>
-<td style="text-align: right;">1976</td>
-<td style="text-align: right;">0.2600000</td>
-<td style="text-align: left;">1bP</td>
-<td style="text-align: right;">305</td>
-<td style="text-align: right;">0.3101003</td>
-<td style="text-align: right;">-3.962387</td>
-<td style="text-align: right;">-1.94206</td>
-<td style="text-align: right;">1.986253</td>
-<td style="text-align: right;">2.008305</td>
-<td style="text-align: right;">0.1189995</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: right;">-8.647486</td>
-<td style="text-align: right;">0.0018382</td>
-<td style="text-align: right;">5.36014</td>
-<td style="text-align: right;">-5.283204</td>
-<td style="text-align: right;">-0.154497</td>
-<td style="text-align: right;">-0.503365</td>
-<td style="text-align: right;">-0.5626083</td>
-<td style="text-align: right;">-0.1447357</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">able</td>
-<td style="text-align: left;">to</td>
-<td style="text-align: left;">were</td>
-<td style="text-align: left;">speaker66</td>
-<td style="text-align: left;">CC</td>
-<td style="text-align: right;">1926</td>
-<td style="text-align: right;">0.3400000</td>
-<td style="text-align: left;">1bP</td>
-<td style="text-align: right;">310</td>
-<td style="text-align: right;">0.3101003</td>
-<td style="text-align: right;">-2.403104</td>
-<td style="text-align: right;">-1.94206</td>
-<td style="text-align: right;">1.986253</td>
-<td style="text-align: right;">2.008305</td>
-<td style="text-align: right;">0.1606245</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: right;">-8.647486</td>
-<td style="text-align: right;">0.0018382</td>
-<td style="text-align: right;">5.36014</td>
-<td style="text-align: right;">-5.283204</td>
-<td style="text-align: right;">-0.154497</td>
-<td style="text-align: right;">-0.503365</td>
-<td style="text-align: right;">-0.5626083</td>
-<td style="text-align: right;">-0.1447357</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">able</td>
-<td style="text-align: left;">to</td>
-<td style="text-align: left;">was</td>
-<td style="text-align: left;">speaker256</td>
-<td style="text-align: left;">IA</td>
-<td style="text-align: right;">1921</td>
-<td style="text-align: right;">0.3900000</td>
-<td style="text-align: left;">1bP</td>
-<td style="text-align: right;">310</td>
-<td style="text-align: right;">0.3101003</td>
-<td style="text-align: right;">-2.800220</td>
-<td style="text-align: right;">-1.94206</td>
-<td style="text-align: right;">1.986253</td>
-<td style="text-align: right;">2.008305</td>
-<td style="text-align: right;">0.2388915</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: right;">-8.647486</td>
-<td style="text-align: right;">0.0018382</td>
-<td style="text-align: right;">5.36014</td>
-<td style="text-align: right;">-5.283204</td>
-<td style="text-align: right;">-0.154497</td>
-<td style="text-align: right;">-0.503365</td>
-<td style="text-align: right;">-0.5626083</td>
-<td style="text-align: right;">-0.1447357</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">able</td>
-<td style="text-align: left;">to</td>
-<td style="text-align: left;">were</td>
-<td style="text-align: left;">speaker256</td>
-<td style="text-align: left;">IA</td>
-<td style="text-align: right;">1921</td>
-<td style="text-align: right;">0.3000000</td>
-<td style="text-align: left;">1bP</td>
-<td style="text-align: right;">310</td>
-<td style="text-align: right;">0.3101003</td>
-<td style="text-align: right;">-2.403104</td>
-<td style="text-align: right;">-1.94206</td>
-<td style="text-align: right;">1.986253</td>
-<td style="text-align: right;">2.008305</td>
-<td style="text-align: right;">0.1985703</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: right;">-8.647486</td>
-<td style="text-align: right;">0.0018382</td>
-<td style="text-align: right;">5.36014</td>
-<td style="text-align: right;">-5.283204</td>
-<td style="text-align: right;">-0.154497</td>
-<td style="text-align: right;">-0.503365</td>
-<td style="text-align: right;">-0.5626083</td>
-<td style="text-align: right;">-0.1447357</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td style="text-align: left;">able</td>
-<td style="text-align: left;">to</td>
-<td style="text-align: left;">be</td>
-<td style="text-align: left;">speaker105</td>
-<td style="text-align: left;">CC</td>
-<td style="text-align: right;">1965</td>
-<td style="text-align: right;">0.0521634</td>
-<td style="text-align: left;">1bP</td>
-<td style="text-align: right;">310</td>
-<td style="text-align: right;">0.3101003</td>
-<td style="text-align: right;">-1.467725</td>
-<td style="text-align: right;">-1.94206</td>
-<td style="text-align: right;">1.986253</td>
-<td style="text-align: right;">2.008305</td>
-<td style="text-align: right;">0.1449822</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: right;">-8.647486</td>
-<td style="text-align: right;">0.0018382</td>
-<td style="text-align: right;">5.36014</td>
-<td style="text-align: right;">-5.283204</td>
-<td style="text-align: right;">-0.154497</td>
-<td style="text-align: right;">-0.503365</td>
-<td style="text-align: right;">-0.5626083</td>
-<td style="text-align: right;">-0.1447357</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">able</td>
-<td style="text-align: left;">to</td>
-<td style="text-align: left;">be</td>
-<td style="text-align: left;">speaker288</td>
-<td style="text-align: left;">MU</td>
-<td style="text-align: right;">1894</td>
-<td style="text-align: right;">0.3100000</td>
-<td style="text-align: left;">1bP</td>
-<td style="text-align: right;">310</td>
-<td style="text-align: right;">0.3101003</td>
-<td style="text-align: right;">-1.467725</td>
-<td style="text-align: right;">-1.94206</td>
-<td style="text-align: right;">1.986253</td>
-<td style="text-align: right;">2.008305</td>
-<td style="text-align: right;">0.1735298</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: left;">FALSE</td>
-<td style="text-align: right;">-8.647486</td>
-<td style="text-align: right;">0.0018382</td>
-<td style="text-align: right;">5.36014</td>
-<td style="text-align: right;">-5.283204</td>
-<td style="text-align: right;">-0.154497</td>
-<td style="text-align: right;">-0.503365</td>
-<td style="text-align: right;">-0.5626083</td>
-<td style="text-align: right;">-0.1447357</td>
-<td style="text-align: right;">2</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-</section>
-<section id="aesthetic-mappings" class="slide level2">
-<h2>Aesthetic mappings</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb5-3"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb5-4"><a href=""></a>      <span class="at">x =</span> WordDuration,</span>
-<span id="cb5-5"><a href=""></a>      <span class="at">fill =</span> Corpus</span>
-<span id="cb5-6"><a href=""></a>    )</span>
-<span id="cb5-7"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-</div>
-<ul>
-<li class="fragment">We ‘map’:
-<ul>
-<li class="fragment">word duration to position on x-axis.</li>
-<li class="fragment">corpus (i.e., which collection of recordings) to ‘fill’</li>
+<li class="fragment">“…I want to keep all the previous approaches here so I can get access to them quickly”</li>
 </ul></li>
-</ul>
-</div><div class="column" style="width:40%;">
-<ul>
-<li class="fragment">No ‘layers’ yet.</li>
-<li class="fragment"><code>ggplot2</code> still produces output…</li>
-</ul>
-</div></div>
-</section>
-<section id="aesthetic-mappings-output" class="slide level2 output-location-slide"><h2>Aesthetic mappings</h2><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-init" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-init-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-init-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-init-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Output with only aesthetic mappings specified. <code>ggplot2</code> sets up a default scale for the x-axis.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="layers" class="slide level2">
-<h2>Layers</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb6-3"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb6-4"><a href=""></a>      <span class="at">x =</span> WordDuration,</span>
-<span id="cb6-5"><a href=""></a>      <span class="at">fill =</span> Corpus</span>
-<span id="cb6-6"><a href=""></a>    )</span>
-<span id="cb6-7"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb6-8"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<ul>
-<li class="fragment">Layers tend to start with <code>geom_</code>.</li>
-<li class="fragment"><code>geom_histogram()</code> creates a histogram.</li>
-<li class="fragment">Layers have options (arguments) which modify their appearance.</li>
+<li class="fragment"><strong><a href="https://youtu.be/8qzVV7eEiaI?si=aBV7MhDKTGp_cjK8">Let’s be professional!</a></strong></li>
 </ul>
 </section>
-<section id="layers-output" class="slide level2 output-location-slide"><h2>Layers</h2><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-fill-scaled-histogram" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-fill-scaled-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-fill-scaled-histogram-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fill-scaled-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Histogram with 30 bins and fill for corpus.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="layers-ii" class="slide level2">
-<h2>Layers (II)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb7-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb7-3"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb7-4"><a href=""></a>      <span class="at">x =</span> WordDuration,</span>
-<span id="cb7-5"><a href=""></a>      <span class="at">fill =</span> Corpus</span>
-<span id="cb7-6"><a href=""></a>    )</span>
-<span id="cb7-7"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb7-8"><a href=""></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<ul>
-<li class="fragment">An alternative layer with the <em>same aesthetic mapping</em>.</li>
-<li class="fragment"><code>geom_density()</code> creates a density plot.</li>
-</ul>
-</section>
-<section id="layers-ii-output" class="slide level2 output-location-slide"><h2>Layers (II)</h2><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-fill-scaled-density" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-fill-scaled-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-fill-scaled-density-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fill-scaled-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Density with 30 bins and fill for corpus.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="layers-iii" class="slide level2">
-<h2>Layers (III)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb8-3"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb8-4"><a href=""></a>      <span class="at">x =</span> WordDuration,</span>
-<span id="cb8-5"><a href=""></a>      <span class="at">fill =</span> Corpus,</span>
-<span id="cb8-6"><a href=""></a>      <span class="at">colour =</span> Corpus</span>
-<span id="cb8-7"><a href=""></a>    )</span>
-<span id="cb8-8"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb8-9"><a href=""></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<ul>
-<li class="fragment">We can go back and change the aesthetic mapping.</li>
-<li class="fragment">NB: difference between ‘fill’ and ‘colour’!</li>
-</ul>
-</section>
-<section id="layers-iii-output" class="slide level2 output-location-slide"><h2>Layers (III)</h2><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-fill-col-scaled-density" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-fill-col-scaled-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-fill-col-scaled-density-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fill-col-scaled-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Density with 30 bins and colour and fill for corpus.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="scales" class="slide level2">
-<h2>Scales</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="10-15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb9-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb9-3"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb9-4"><a href=""></a>      <span class="at">x =</span> WordDuration,</span>
-<span id="cb9-5"><a href=""></a>      <span class="at">fill =</span> Corpus,</span>
-<span id="cb9-6"><a href=""></a>      <span class="at">colour =</span> Corpus</span>
-<span id="cb9-7"><a href=""></a>    )</span>
-<span id="cb9-8"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb9-9"><a href=""></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
-<span id="cb9-10"><a href=""></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb9-11"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"MU"</span> <span class="ot">=</span> <span class="st">"#b120cf"</span>, <span class="st">"IA"</span> <span class="ot">=</span> <span class="st">"#cfb120"</span>, <span class="st">"CC"</span> <span class="ot">=</span> <span class="st">"#20cfb1"</span>)</span>
-<span id="cb9-12"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb9-13"><a href=""></a>  <span class="fu">scale_colour_manual</span>(</span>
-<span id="cb9-14"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"MU"</span> <span class="ot">=</span> <span class="st">"#b120cf"</span>, <span class="st">"IA"</span> <span class="ot">=</span> <span class="st">"#cfb120"</span>, <span class="st">"CC"</span> <span class="ot">=</span> <span class="st">"#20cfb1"</span>)</span>
-<span id="cb9-15"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<ul>
-<li class="fragment">Functions which start with <code>scale_</code> help to specify aesthetic mappings.</li>
-<li class="fragment">i.e., <em>this</em> data value goes to <em>that</em> colour, etc.</li>
-</ul>
-</section>
-<section id="scales-output" class="slide level2 output-location-slide"><h2>Scales</h2><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-density-scale" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-density-scale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-density-scale-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-scale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Density with 30 bins and colour and fill for corpus. Both colour and fill modified from default scales.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="coordinates" class="slide level2">
-<h2>Coordinates</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb10-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb10-3"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb10-4"><a href=""></a>      <span class="at">x =</span> WordDuration,</span>
-<span id="cb10-5"><a href=""></a>      <span class="at">fill =</span> Corpus,</span>
-<span id="cb10-6"><a href=""></a>      <span class="at">colour =</span> Corpus</span>
-<span id="cb10-7"><a href=""></a>    )</span>
-<span id="cb10-8"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb10-9"><a href=""></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
-<span id="cb10-10"><a href=""></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb10-11"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"MU"</span> <span class="ot">=</span> <span class="st">"#b120cf"</span>, <span class="st">"IA"</span> <span class="ot">=</span> <span class="st">"#cfb120"</span>, <span class="st">"CC"</span> <span class="ot">=</span> <span class="st">"#20cfb1"</span>)</span>
-<span id="cb10-12"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb10-13"><a href=""></a>  <span class="fu">scale_colour_manual</span>(</span>
-<span id="cb10-14"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"MU"</span> <span class="ot">=</span> <span class="st">"#b120cf"</span>, <span class="st">"IA"</span> <span class="ot">=</span> <span class="st">"#cfb120"</span>, <span class="st">"CC"</span> <span class="ot">=</span> <span class="st">"#20cfb1"</span>)</span>
-<span id="cb10-15"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb10-16"><a href=""></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<ul>
-<li class="fragment">Coordinate systems also determine the mapping.</li>
-<li class="fragment">A lot of overlap with scales.</li>
-</ul>
-</section>
-<section id="coordinates-output" class="slide level2 output-location-slide"><h2>Coordinates</h2><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-density-coord" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-density-coord-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-density-coord-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-coord-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Density with 30 bins and colour and fill for corpus. Both colour and fill modified from default scales. Silly coordinate added.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="facets" class="slide level2">
-<h2>Facets</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb11-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb11-3"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb11-4"><a href=""></a>      <span class="at">x =</span> WordDuration,</span>
-<span id="cb11-5"><a href=""></a>      <span class="at">fill =</span> Corpus,</span>
-<span id="cb11-6"><a href=""></a>      <span class="at">colour =</span> Corpus</span>
-<span id="cb11-7"><a href=""></a>    )</span>
-<span id="cb11-8"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb11-9"><a href=""></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
-<span id="cb11-10"><a href=""></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb11-11"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"MU"</span> <span class="ot">=</span> <span class="st">"#b120cf"</span>, <span class="st">"IA"</span> <span class="ot">=</span> <span class="st">"#cfb120"</span>, <span class="st">"CC"</span> <span class="ot">=</span> <span class="st">"#20cfb1"</span>)</span>
-<span id="cb11-12"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb11-13"><a href=""></a>  <span class="fu">scale_colour_manual</span>(</span>
-<span id="cb11-14"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"MU"</span> <span class="ot">=</span> <span class="st">"#b120cf"</span>, <span class="st">"IA"</span> <span class="ot">=</span> <span class="st">"#cfb120"</span>, <span class="st">"CC"</span> <span class="ot">=</span> <span class="st">"#20cfb1"</span>)</span>
-<span id="cb11-15"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb11-16"><a href=""></a>  <span class="fu">facet_grid</span>(<span class="fu">vars</span>(final))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<ul>
-<li class="fragment">We use facets to create subplots.</li>
-<li class="fragment">Note use of <code>var()</code> function.</li>
-</ul>
-</section>
-<section id="facets-output" class="slide level2 output-location-slide"><h2>Facets</h2><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-density-facet" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-density-facet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-density-facet-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-facet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Density with 30 bins and colour and fill for corpus. Faceted by word finality.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="the-forbidden-plot" class="slide level2">
-<h2>The Forbidden Plot</h2>
-<ul>
-<li class="fragment">Pie charts are out of fashion.</li>
-<li class="fragment">I used to (wrongly!) say you can’t even make them in <code>ggplot2</code>.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a>big_dia <span class="sc">|&gt;</span> </span>
-<span id="cb12-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb12-3"><a href=""></a>    <span class="fu">aes</span>(</span>
-<span id="cb12-4"><a href=""></a>      <span class="at">x =</span> <span class="fu">factor</span>(<span class="dv">1</span>),</span>
-<span id="cb12-5"><a href=""></a>      <span class="at">fill =</span> Corpus</span>
-<span id="cb12-6"><a href=""></a>    )</span>
-<span id="cb12-7"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb12-8"><a href=""></a>  <span class="fu">geom_bar</span>(<span class="at">width=</span><span class="dv">1</span>, <span class="at">colour=</span><span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb12-9"><a href=""></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb12-10"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"MU"</span> <span class="ot">=</span> <span class="st">"#b120cf"</span>, <span class="st">"IA"</span> <span class="ot">=</span> <span class="st">"#cfb120"</span>, <span class="st">"CC"</span> <span class="ot">=</span> <span class="st">"#20cfb1"</span>)</span>
-<span id="cb12-11"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb12-12"><a href=""></a>  <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">"y"</span>, <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb12-13"><a href=""></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-</section>
-<section id="" class="slide level2 output-location-slide"><div class="cell output-location-slide">
-<div class="cell-output-display">
-<div id="fig-forbidden" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-forbidden-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="index_files/figure-revealjs/fig-forbidden-1.png" width="960">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-forbidden-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: The forbidden plot.
-</figcaption>
-</figure>
-</div>
-</div>
-</div></section><section id="what-to-do-now" class="slide level2">
-<h2>What to do now</h2>
-<ol type="1">
-<li class="fragment">Go to <a href="https://nzilbb.github.io/statistics_workshops/" class="uri">https://nzilbb.github.io/statistics_workshops/</a></li>
-<li class="fragment">Work through the ‘Exploratory Data Visualisation’ chapter</li>
-</ol>
+<section id="section-1" class="slide level2" data-background-iframe="https://www.youtube.com/embed/BHPb94X0NJE?si=XvxcFPHe0CHZAn44&amp;start=44" data-background-color="black">
+<h2></h2>
 </section></section>
 <section id="references" class="title-slide slide level1 smaller scrollable">
 <h1>References</h1>
@@ -958,35 +246,14 @@ Müller, Kirill. 2020. <em><span class="nocase">here</span>: A Simpler Way to Fi
 <div id="ref-base" class="csl-entry" role="listitem">
 R Core Team. 2025. <em><span>R</span>: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
-<div id="ref-soskuthyChangingWordUsage2017" class="csl-entry" role="listitem">
-Sóskuthy, Márton, and Jennifer Hay. 2017. <span>“Changing Word Usage Predicts Changing Word Durations in <span>New Zealand English</span>.”</span> <em>Cognition</em> 166 (September): 298–313. <a href="https://doi.org/10.1016/j.cognition.2017.05.032">https://doi.org/10.1016/j.cognition.2017.05.032</a>.
-</div>
-<div id="ref-wickham2016ggplot2" class="csl-entry" role="listitem">
-Wickham, H. 2016. <em>Ggplot2: <span>Elegant</span> Graphics for Data Analysis</em>. Use <span>R</span>! Springer International Publishing. <a href="https://books.google.co.nz/books?id=RTMFswEACAAJ">https://books.google.co.nz/books?id=RTMFswEACAAJ</a>.
-</div>
 <div id="ref-tidyverse" class="csl-entry" role="listitem">
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the <span class="nocase">tidyverse</span>.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
-</div>
-<div id="ref-wilkinsonGrammarGraphics1999" class="csl-entry" role="listitem">
-Wilkinson, Leland. 1999. <em>The Grammar of Graphics</em>. Statistics and Computing. New York: Springer. <a href="http://digitool.hbz-nrw.de:1801/webclient/DeliveryManager?pid=2966363">http://digitool.hbz-nrw.de:1801/webclient/DeliveryManager?pid=2966363</a>.
-</div>
-<div id="ref-knitr2014" class="csl-entry" role="listitem">
-Xie, Yihui. 2014. <span>“<span class="nocase">knitr</span>: A Comprehensive Tool for Reproducible Research in <span>R</span>.”</span> In <em>Implementing Reproducible Computational Research</em>, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC.
-</div>
-<div id="ref-knitr2015" class="csl-entry" role="listitem">
-———. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
-</div>
-<div id="ref-knitr2025" class="csl-entry" role="listitem">
-———. 2025. <em><span class="nocase">knitr</span>: A General-Purpose Package for Dynamic Report Generation in <span>R</span></em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
 </div>
 <div id="ref-rmarkdown2018" class="csl-entry" role="listitem">
 Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.
 </div>
 <div id="ref-rmarkdown2020" class="csl-entry" role="listitem">
 Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbook</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown-cookbook">https://bookdown.org/yihui/rmarkdown-cookbook</a>.
-</div>
-<div id="ref-kableExtra" class="csl-entry" role="listitem">
-Zhu, Hao. 2024. <em><span class="nocase">kableExtra</span>: Construct Complex Table with <span>“<span class="nocase">kable</span>”</span> and Pipe Syntax</em>. <a href="https://doi.org/10.32614/CRAN.package.kableExtra">https://doi.org/10.32614/CRAN.package.kableExtra</a>.
 </div>
 </div>
 </section>

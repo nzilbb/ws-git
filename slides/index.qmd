@@ -58,15 +58,45 @@ theme_set(theme_bw())
 
 ## Overview
 
-1. `git` and version control.
+1. Git and version control
 2. GitHub and UC's GitLab
-3. Recipes and advice.
-4. When things go wrong.
+3. Recipes and advice
+4. When things go wrong
 
 ::: fragment
 Slides:
 [nzilbb.github.io/ws-git/slides](https://nzilbb.github.io/ws-data-vis/slides)
 :::
+
+# Git and version control
+
+## {background-image="http://www.phdcomics.com/comics/archive/phd101212s.gif" background-size="contain"}
+
+## Version control
+
+- Software comes in *versions*
+- Developers need to know how versions relate to each other
+- Version control systems are the solution
+- We can borrow their methods
+
+## Why use version control? {.smaller}
+
+- "Your paper relies on whatsit scores for every dongle, but I think you must have
+made an error. How did you calculate them?"
+    - "...uh, they must be on this old hard drive somewhere... wait... perhaps my
+    RA did it?..."
+- "We've switched to _sparkly-shiny-new) models this week, but they seem similar to 
+the _old-reliable-friendly_ models we fit a few months ago. How do the results of 
+the two approaches differ?"
+    - "...uh, we replaced them..."
+- "Why is your Markdown file longer than _War and Peace_?
+    - "...I want to keep all the previous approaches here so I can get access to
+    them quickly"
+- **[Let's be professional!](https://youtu.be/8qzVV7eEiaI?si=aBV7MhDKTGp_cjK8)**
+
+
+## {background-iframe="https://www.youtube.com/embed/BHPb94X0NJE?si=XvxcFPHe0CHZAn44&amp;start=44" background-color="black"}
+
 
 
 # References
