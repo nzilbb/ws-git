@@ -58,16 +58,16 @@ theme_set(theme_bw())
 
 ## Overview
 
-1.  What is `git`?
-2.  Download some data from OSF.io.
-    -   Topic: Word usage factors and duration.
-    -   We'll use this for the rest of the 'Foundations' sessions.
-3.  Exploratory visualisation with `ggplot2`.
+1. `git` and version control.
+2. GitHub and UC's GitLab
+3. Recipes and advice.
+4. When things go wrong.
 
 ::: fragment
 Slides:
 [nzilbb.github.io/ws-git/slides](https://nzilbb.github.io/ws-data-vis/slides)
 :::
+
 
 # References
 
