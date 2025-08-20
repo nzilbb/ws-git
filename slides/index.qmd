@@ -70,14 +70,14 @@ Slides:
 
 # Git and version control
 
-## {background-image="http://www.phdcomics.com/comics/archive/phd101212s.gif" background-size="contain"}
-
 ## Version control
 
 - Software comes in *versions*
 - Developers need to know how versions relate to each other
 - Version control systems are the solution
-- We can borrow their methods
+- We have similar problems...
+
+## {background-image="http://www.phdcomics.com/comics/archive/phd101212s.gif" background-size="contain"}
 
 ## Why use version control? {.smaller}
 
@@ -94,9 +94,38 @@ the two approaches differ?"
     them quickly"
 - **[Let's be professional!](https://youtu.be/8qzVV7eEiaI?si=aBV7MhDKTGp_cjK8)**
 
+## Git
 
-## {background-iframe="https://www.youtube.com/embed/BHPb94X0NJE?si=XvxcFPHe0CHZAn44&amp;start=44" background-color="black"}
+- [Git](https://en.wikipedia.org/wiki/Git) is a widely used version control system.
+- It allows you to track versions and see differences between them
+    - ...along with dividing projects into into 'branches', merging distinct
+    branches together, etc etc.
+- It is *distributed* in the sense that the same project can be on multiple 
+computers.
+- More controlled than, e.g., just putting your project on dropbox.
+    - BTW: you should at least do that.
+    
+## Git (cont.)
 
+- If used well, say goodbye to `_Final_JWBcomments_v2_postR&R_reallyfinal.docx`
+- But there's a learning curve...
+
+## {background-iframe="https://www.youtube.com/embed/BHPb94X0NJE?si=XvxcFPHe0CHZAn44&amp;start=64" background-color="black"}
+
+## Git vocab
+
+::: fragment
+It's best to learn by doing, but...
+
+:::
+
+- **Repo/Repository:** Directory managed by Git.
+- **Commit:** A snapshot of the repository.
+- **Diff:** The difference between two commits.
+- **Remote:** A version of the repository hosted online.
+- **Pull:** To get any changes from a remote repository and merge them with
+your copy of the repository.
+- **Push:** To upload your commits to a remote repository.
 
 
 # References
