@@ -272,6 +272,12 @@ project.
 - Make changes to a respository, commit and push.
 - Add someone else to your GitHub repository and try to work together.
 
+# This won't play nicely.
+
+## Hi
+
+- This is another message.
+
 # References
 
 ```{r}
