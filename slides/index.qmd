@@ -272,6 +272,10 @@ project.
 - Make changes to a respository, commit and push.
 - Add someone else to your GitHub repository and try to work together.
 
+# Creating a merge conflict
+
+- What happens when I make a merge conflict?
+
 # References
 
 ```{r}
