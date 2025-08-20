@@ -274,7 +274,9 @@ project.
 
 # Creating a merge conflict
 
-- What happens when I make a merge conflict?
+## I'm resolved now.
+
+Hi
 
 # References
 
