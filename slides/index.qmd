@@ -127,6 +127,23 @@ It's best to learn by doing, but...
 your copy of the repository.
 - **Push:** To upload your commits to a remote repository.
 
+---
+
+::: r-stack
+
+:::: {.fragment .fade-in-then-out}
+![Write a commit message and press 'commit'](images/commit.png)
+::::
+
+:::: {.fragment .fade-in-then-out}
+![A history of commits](images/history.png)
+::::
+
+:::: {.fragment .fade-in-then-out}
+![Differences between commits.](images/diff.png)
+::::
+
+:::
 
 # References
 
