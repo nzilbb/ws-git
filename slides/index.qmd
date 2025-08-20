@@ -149,15 +149,40 @@ your copy of the repository.
 
 ## GitHub
 
-- GitHub and Git are two different things.
+- [GitHub](https://github.com) and Git are two different things
+- GitHub hosts Git repositories
+- Owned by Microsoft
+- Widely used to share projects publically.
+    - But you can have private git repositories.
+- GitHub Pages allows us to host nice-looking supplementary materials.
 
 ## UC GitLab
+
+- GitLab is another service for hosting Git repositories
+- GitLab.com is very similar to GitHub
+- But: UC hosts its own version of GitLab locally.
+- Good for collaborating locally.
+- [https://eng-git.canterbury.ac.nz/](https://eng-git.canterbury.ac.nz/)
+
+## Big data and models
+
+- GitHub and GitLab are not for storing large files
+- Git will ignore all files listen in the `.gitignore` file
+- I usually share large files or models using [OSF.io](https://osf.io)
+- The limit: 100MB
+- If one of you figures out "Git Large File Storage", let me know...
+
+## Risks
+
+- The whole point of Git is version control
+- If you share a repository publically, you are sharing its entire history
+- Private data has been accidentally leaked this way!
 
 # Recipes and advice
 
 ## The source
 
-....
+
 
 ## GitHub first
 
@@ -165,7 +190,7 @@ your copy of the repository.
 
 ## Advice
 
-
+- Always have a `README.md` file.
 
 # When things go wrong
 
