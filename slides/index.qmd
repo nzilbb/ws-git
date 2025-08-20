@@ -145,6 +145,36 @@ your copy of the repository.
 
 :::
 
+# GitHub and UC GitLab
+
+## GitHub
+
+- GitHub and Git are two different things.
+
+## UC GitLab
+
+# Recipes and advice
+
+## The source
+
+....
+
+## GitHub first
+
+## Or, GitLab first...
+
+## Advice
+
+
+
+# When things go wrong
+
+## Merge problems
+
+# What now?
+
+## What now?
+
 # References
 
 ```{r}
