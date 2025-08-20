@@ -133,6 +133,9 @@ your copy of the repository.
 
 :::: {.fragment .fade-in-then-out}
 ![Write a commit message and press 'commit'](images/commit.png)
+
+- Nothing is tracked by Git until it is "committed"
+- i.e., saving a document does not commit it.
 ::::
 
 :::: {.fragment .fade-in-then-out}
@@ -182,23 +185,92 @@ your copy of the repository.
 
 ## The source
 
+::: fragment
+My first port of call:
 
+:::
+
+::: fragment
+:::: r-fit-text
+[_Happy Git and GitHub for the useR_ by Jennifer Bryan](https://happygitwithr.com/)
+::::
+:::
+
+::: fragment
+Also see:
+:::
+
+::: fragment
+:::: r-fit-text
+[_Version Control with Git_ Software Carpentry Lesson](https://swcarpentry.github.io/git-novice/)
+::::
+:::
 
 ## GitHub first
 
+- Create a repository on GitHub.
+
+::: fragment
+![](images/new_repo.png)
+:::
+
+- `File -> New Project -> Version Control`
+- Paste in the link.
+
+
 ## Or, GitLab first...
+
+::: fragment
+
+![](images/new_repo_lab.png)
+
+:::
 
 ## Advice
 
 - Always have a `README.md` file.
+    - This is the front page of your repository on GitHub
+- **Good:** Frequent small commits.
+- **Good:** When collaborating, frequent pushing and pulling.
+- Extension: "branches" can be useful for collaboration.
 
 # When things go wrong
 
 ## Merge problems
 
+- You and I have both made changes to the repository. How do we **merge**
+them together?
+- First pusher wins (push often!).
+- Second person must pull before they can push.
+- If no overlapping changes, there's no problem.
+- You probably won't be so lucky... (I'll show you an example later...)
+
+
+## {background-image="images/trinity.gif"}
+
+::: {.fragment .inverse-backlight style="padding: 15px; border-radius: 20px; background: rgba(22, 31, 50, 0.8)"}
+- Sometimes a local repository becomes very hard to sync with the remote.
+- **The nuclear option:**
+  1. Rename your local repository.
+  2. Clone a new copy from GitHub
+  3. Make necessary changes (perhaps copying across parts of the old local repository)
+- [More](https://happygitwithr.com/burn)
+
+:::
+
 # What now?
 
 ## What now?
+
+::: fragment
+Many options! Some ideas:
+:::
+
+- Clone a repository from the NZILBB GitHub inside RStudio.
+- Make your own new repository on GitHub and use the link to make a new RStudio
+project.
+- Make changes to a respository, commit and push.
+- Add someone else to your GitHub repository and try to work together.
 
 # References
 

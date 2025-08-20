@@ -271,6 +271,10 @@ Joshua Wilson Black <a href="https://orcid.org/0000-0002-8272-5763" class="quart
 <figcaption>Write a commit message and press ‘commit’</figcaption>
 </figure>
 </div>
+<ul>
+<li class="fragment">Nothing is tracked by Git until it is “committed”</li>
+<li class="fragment">i.e., saving a document does not commit it.</li>
+</ul>
 </div>
 <div class="fragment fade-in-then-out">
 <div class="quarto-figure quarto-figure-center">
@@ -343,17 +347,52 @@ Joshua Wilson Black <a href="https://orcid.org/0000-0002-8272-5763" class="quart
 </section>
 <section id="the-source" class="slide level2">
 <h2>The source</h2>
+<div class="fragment">
+<p>My first port of call:</p>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p><a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em> by Jennifer Bryan</a></p>
+</div>
+</div>
+<div class="fragment">
+<p>Also see:</p>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p><a href="https://swcarpentry.github.io/git-novice/"><em>Version Control with Git</em> Software Carpentry Lesson</a></p>
+</div>
+</div>
 </section>
 <section id="github-first" class="slide level2">
 <h2>GitHub first</h2>
+<ul>
+<li class="fragment">Create a repository on GitHub.</li>
+</ul>
+<div class="fragment">
+<p><img data-src="images/new_repo.png"></p>
+</div>
+<ul>
+<li class="fragment"><code>File -&gt; New Project -&gt; Version Control</code></li>
+<li class="fragment">Paste in the link.</li>
+</ul>
 </section>
 <section id="or-gitlab-first" class="slide level2">
 <h2>Or, GitLab first…</h2>
+<div class="fragment">
+<p><img data-src="images/new_repo_lab.png"></p>
+</div>
 </section>
 <section id="advice" class="slide level2">
 <h2>Advice</h2>
 <ul>
-<li class="fragment">Always have a <code>README.md</code> file.</li>
+<li class="fragment">Always have a <code>README.md</code> file.
+<ul>
+<li class="fragment">This is the front page of your repository on GitHub</li>
+</ul></li>
+<li class="fragment"><strong>Good:</strong> Frequent small commits.</li>
+<li class="fragment"><strong>Good:</strong> When collaborating, frequent pushing and pulling.</li>
+<li class="fragment">Extension: “branches” can be useful for collaboration.</li>
 </ul>
 </section></section>
 <section>
@@ -363,6 +402,28 @@ Joshua Wilson Black <a href="https://orcid.org/0000-0002-8272-5763" class="quart
 </section>
 <section id="merge-problems" class="slide level2">
 <h2>Merge problems</h2>
+<ul>
+<li class="fragment">You and I have both made changes to the repository. How do we <strong>merge</strong> them together?</li>
+<li class="fragment">First pusher wins (push often!).</li>
+<li class="fragment">Second person must pull before they can push.</li>
+<li class="fragment">If no overlapping changes, there’s no problem.</li>
+<li class="fragment">You probably won’t be so lucky… (I’ll show you an example later…)</li>
+</ul>
+</section>
+<section id="section-2" class="slide level2" data-background-image="images/trinity.gif">
+<h2></h2>
+<div class="fragment inverse-backlight" style="padding: 15px; border-radius: 20px; background: rgba(22, 31, 50, 0.8)">
+<ul>
+<li class="fragment">Sometimes a local repository becomes very hard to sync with the remote.</li>
+<li class="fragment"><strong>The nuclear option:</strong>
+<ol type="1">
+<li class="fragment">Rename your local repository.</li>
+<li class="fragment">Clone a new copy from GitHub</li>
+<li class="fragment">Make necessary changes (perhaps copying across parts of the old local repository)</li>
+</ol></li>
+<li class="fragment"><a href="https://happygitwithr.com/burn">More</a></li>
+</ul>
+</div>
 </section></section>
 <section>
 <section id="what-now" class="title-slide slide level1 center">
@@ -371,6 +432,15 @@ Joshua Wilson Black <a href="https://orcid.org/0000-0002-8272-5763" class="quart
 </section>
 <section id="what-now-1" class="slide level2">
 <h2>What now?</h2>
+<div class="fragment">
+<p>Many options! Some ideas:</p>
+</div>
+<ul>
+<li class="fragment">Clone a repository from the NZILBB GitHub inside RStudio.</li>
+<li class="fragment">Make your own new repository on GitHub and use the link to make a new RStudio project.</li>
+<li class="fragment">Make changes to a respository, commit and push.</li>
+<li class="fragment">Add someone else to your GitHub repository and try to work together.</li>
+</ul>
 </section></section>
 <section id="references" class="title-slide slide level1 smaller scrollable">
 <h1>References</h1>
